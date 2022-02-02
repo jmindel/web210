@@ -1,0 +1,102 @@
+/* Global Styles */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #54494B;
+    background-color: #F1F7ED;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    line-height: 1.35;
+}
+
+img {
+    width: 300px;
+}
+
+a {
+    color: #6e6063;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+h1, h2 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.75em;
+    text-shadow: 1.2px 1.2px #6e6063;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.75em;
+}
+
+.content-wrap {
+    width: 850px;
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Profile */
+header {
+    background-color: #91C7B1;
+}
+
+/* Projects */
+.projects {
+    background-color: #E3D081;
+}
+
+.project-item {
+    overflow: hidden;
+    border-bottom: 1px solid #54494B;
+    padding: 30px 0;
+}
+
+.project-item img {
+    float: left;
+    margin-right: 30px;
+}
+
+.projects a {
+    text-decoration: none;
+    color: rgb(250, 241, 241);
+    background-color: #B33951;
+    border-radius: 2px;
+    padding: 4px;
+    display: inline-block;
+}
+
+.projects a:hover {
+    padding: 4.2px;
+    background-color: #9c3248;
+}
+/* Work Experience */
+.work {
+    background-color: #EEE2B1;
+}
+/* Education */
+
+/* Contact */
+footer {
+    background-color: #B33951;
+    color: #F1F7ED;
+}
+
+footer a {
+    color: #F1F7ED;
+}
