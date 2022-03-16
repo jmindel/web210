@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Mindel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="content-wrap">
+        <nav>
+            <button id="hamburger">&#9776;</button>
+            <div id="toggle">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        <aside>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/me-big.jpg">
+                <source media="(min-width: 768px)" srcset="images/me-medium.jpg">
+                <img src="images/me-small.jpg" alt="Me">
+            </picture>
+        </aside>
+        <header>
+            <h1>Jesse Mindel</h1>
+            <h2>Web 210 Student</h2>
+        </header>
+        <div id="intro">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque ex dolores asperiores? Dicta, rerum. Unde nulla id voluptates, eveniet aperiam rem soluta eaque numquam omnis accusantium, quo excepturi ex.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas illo culpa delectus laborum quae animi officiis repellat, cumque quasi nemo deleniti itaque vitae est eum consequatur iste! Totam, voluptatum facere.</p>
+        </div>
+        <main>
+            <h2>My Projects</h2>
+            <div id="projects">
+                <section>
+                    <a href="#">
+                        <img src="images/placeholder.jpg" alt="Placeholder">
+                        <div>
+                            <h2>Project 1</h2>
+                        </div>
+                    </a>
+                </section>
+                <section>
+                    <a href="#">
+                        <img src="images/placeholder.jpg" alt="Placeholder">
+                        <div>
+                            <h2>Project 2</h2>
+                        </div>
+                    </a>
+                </section>
+                <section>
+                    <a href="#">
+                        <img src="images/placeholder.jpg" alt="Placeholder">
+                        <div>
+                            <h2>Project 3</h2>
+                        </div>
+                    </a>
+                </section>
+                </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy;Jesse Mindel 2022</p>
+    </footer>
+    <script>
+        var hamburger = document.getElementById("hamburger");
+        var menu = document.getElementById("toggle");
+        var toggleState = false;
+        hamburger.addEventListener("click",function(){
+            if (!toggleState) {
+                toggleState = true;
+                menu.style.display = "block";
+            } else {
+                toggleState = false;
+                menu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

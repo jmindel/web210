@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color:antiquewhite;
+}
+
+footer p {
+    color: black;
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+h1, h2 {
+    text-shadow: 0.75px 0.75px teal;
+}
+
+#content-wrap {
+    margin: 0 auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 4.5em 1fr 0.25fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'nav'
+    'aside'
+    'header'
+    'intro'
+    'main';
+}
+
+nav {
+    grid-area: nav;
+    height: 100%;
+    width: 100%;
+    background-color:#ED9B40;
+    text-align: right;
+}
+
+nav button {
+    padding: 0.325em 0.35em;
+    padding-top: 0.2625em;
+    background-color: aliceblue;
+    border: 1px solid teal;
+    color: teal;
+    font-size: 1.5em;
+    border-radius: 0.2em;
+    margin: 0.475em;
+}
+
+#toggle {
+    display: none;
+}
+
+aside {
+    grid-area: aside;
+}
+
+aside picture, aside img {
+    width: 100%;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    margin-top: 1.25em;
+}
+
+#intro {
+    grid-area: intro;
+    font-size: 1.25em;
+    text-align: center;
+    margin: 0.5em auto;
+    max-width: 95%;
+}
+
+main {
+    grid-area: main;
+    text-align: center;
+    margin: 0.5em auto;
+    max-width: 90%;
+}
+
+main > h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+#projects > section {
+    background-color: aliceblue;
+    border: 1px solid teal;
+    border-radius: 7px;
+    padding: 10px;
+    overflow-y: hidden;
+    height: calc(90% - 2.5em);
+}
+
+a {
+    text-decoration: none;
+}
+
+#projects > section > a img {
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#projects > section > a div {
+    background-color: rgba(150,150,150,0.5);
+    width: 100%;
+    margin: 0 auto;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    bottom: 54px;
+    height: 50px;
+}
+
+#projects > section > a h2 {
+    color: black;
+    padding-top: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: #ED9B40;
+    text-align: center;
+    padding: 1em 0;
+}
+
+@media only screen and (max-width: 1023.5px) {
+    nav a {
+        position: relative;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid teal;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 0.3em 0;
+        border-radius: 0.1em;
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #content-wrap {
+        grid-template-rows: 4.5em 0.25fr 0.25fr;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas:
+        'nav nav'
+        'aside header'
+        'intro intro'
+        'main main';
+    }
+
+    aside {
+        padding: 3%;
+    }
+
+    aside img {
+        border-radius: 0.5em;
+    }
+
+    header {
+        font-size: 2em;
+        margin-top: 12vw;
+    }
+
+    #projects {
+        max-width: 80%;
+        margin: 10px auto;
+    }
+    
+    #projects > section {
+        height: calc(90% - 35px);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #content-wrap {
+        grid-template-rows: 4.5em 0.5fr 0.5fr 0.25fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        'nav nav'
+        'aside header'
+        'aside intro'
+        'main main';
+    }
+
+    #toggle {
+        display: block;
+    }
+
+
+
+    nav a {
+        display: inline-block!important;
+        padding: 0.325em 0.35em;
+        padding-top: 0.2625em;
+        background-color: aliceblue;
+        border: 1px solid teal;
+        color: teal;
+        font-size: 1.5em;
+        border-radius: 0.2em;
+        margin: 0.475em;
+        margin-left: 0;
+    }
+
+    nav a:hover {
+        background-color: cornsilk;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    aside {
+        padding: 3%;
+    }
+
+    aside img {
+        border-radius: 0.5em;
+    }
+
+    header {
+        font-size: 2em;
+        margin-top: 5vw;
+    }
+
+    #projects {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 85%;
+        margin: 10px auto;
+    }
+
+    #projects > section {
+        height: calc(90% - 40px);
+    }
+
+    #projects > section > a div {
+        bottom: 5000px;
+    }
+    #projects > section > a img:hover + div {
+        bottom: 54px;
+    }
+}
